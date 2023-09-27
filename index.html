@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__body">
+                <div class="header__email">
+                    <a href="mailto:storemicon@gmail.com" class="email">storemicon@gmail.com</a>
+                </div>
+                <a class="header__logo" href="#">
+                    <img src="./images/LOGO.svg" alt="">
+                </a>
+                <div class="header__navigation head-nav">
+                    <li class="head-nav__cart"></li>
+                    <li class="head-nav__profile"></li>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <section class="main__topblock topblock">
+                <div class="topblock__body topblockbody">
+                    <p class="topblockbody__text">
+                        The wrong pillow is not only a source of discomfort. If the neck is in
+                        an uncomfortable position for a long time, this can lead to unpleasant or even painful
+                        sensations.
+                        We have collected a huge range, where everyone will find the best option for themselves.
+                    </p>
+                    <a href="./catalog.html"><button class="topblockbody__catalog-button">Go to catalog</button></a>
+                </div>
+                <div class="topblock__image">
+                    <img src="./images/bgimage.png" alt="">
+                </div>
+            </section>
+            <section class="main__bottomblock bottomblock">
+                <div class="bottomblock-container">
+                    <div class="bottomblock__mostpopular mostpopular">
+                        <div class="mostpopular__label">
+                            <div class="mostpopular__circle cirle1"></div>
+                            <div class="mostpopular__circle cirle2"></div>
+                            <p class="mostpopular__text">
+                                MOST POPULAR
+                            </p>
+                            <div class="mostpopular__circle cirle3"></div>
+                            <div class="mostpopular__circle cirle4"></div>
+                        </div>
+                        <div class="mostpopular__slider swiper">
+                            <div class="swiper-wrapper" id="slides"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="bottomblock__recentnews recentnews">
+                        <div class="recentnews__secondaryblock secondaryblock">
+                            <div class="secondaryblock__selected-block">
+                                <div class="slide">
+                                    <a href="./newspage.html">
+                                        <img src="">
+                                    </a>
+                                    <p class="slide-text"></p>
+                                </div>
+                            </div>
+                            <div class="secondaryblock__slider-block-container">
+                                <p class="secondaryblock__label">RECENT NEWS</p>
+                                <div class="secondaryblock__slider">
+                                    <div class="slide">
+                                        <img src="./images/newsslider/newsimg1.png" alt="">
+                                        <p class="slide-text">Saturday festival in Micon. Discount 50%</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./images/newsslider/newsimg2.png" alt="">
+                                        <p class="slide-text">New summer collection</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./images/newsslider/newsimg1.png" alt="">
+                                        <p class="slide-text">Monday festival in Micon. Discount 25%</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./images/newsslider/newsimg2.png" alt="">
+                                        <p class="slide-text">New summer collection</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiperjs.js"></script>
+    <script src="js/imageslider.js"></script>
+</body>
+
+</html>

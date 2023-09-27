@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="css/catalog.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__body">
+                <div class="header__email">
+                    <a href="mailto:storemicon@gmail.com" class="email">storemicon@gmail.com</a>
+                </div>
+                <a class="header__logo" href="index.html">
+                    <img src="./images/LOGO.svg" alt="">
+                </a>
+                <div class="header__navigation head-nav">
+                    <li class="head-nav__cart"></li>
+                    <li class="head-nav__profile"></li>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <div class="main__body">
+                <aside class="main__filters filters">
+                    <div class="filters__pricefilter pricefilter">
+                        <details open class="pricedetails">
+                            <summary>PRICE</summary>
+                            <div class="hidden-text">
+                                <div class="price-filter-slider">
+                                    <div class="progress" style="left: 0%; right: 0%;"></div>
+                                </div>
+                                <div class="range-input">
+                                    <input type="range" id="minPrice" class="range-min" min="0" max="100" value="0"
+                                        step="1">
+                                    <input type="range" id="maxPrice" class="range-max" min="0" max="100" value="100"
+                                        step="1">
+
+                                </div>
+                                <div class="price-input">
+                                    <div class="field">
+                                        <span>from</span>
+                                        <input type="number" id="minValue" class="input-min" value="0" min="0"
+                                            max="100">
+                                    </div>
+                                    <div class="field">
+                                        <span class="to">to</span>
+                                        <input type="number" id="maxValue" class="input-max" value="100" min="0"
+                                            max="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="filters__pillowsfilter pillowsfilter">
+                        <details open class="pillowsdetails">
+                            <summary>PILLOWS</summary>
+                            <div class="hidden-text">
+                                <div class="pillowsfilter__color pillowsfiltercolor">
+                                    <div class="pillowsfiltercolor__title filtertitle">Color</div>
+                                    <div class="pillowsfiltercolor-btns" id="pillowsfiltercolor-buttons">
+                                        <button class="btttn3 active" data-color="All"></button>
+                                        <button class="btttn3 pillowsfiltercolor-btns__color-white"
+                                            data-color="white"></button>
+                                        <button class="btttn3 pillowsfiltercolor-btns__color-black"
+                                            data-color="black"></button>
+                                        <button class="btttn3 pillowsfiltercolor-btns__color-orange"
+                                            data-color="orange"></button>
+                                        <button class="btttn3 pillowsfiltercolor-btns__color-red"
+                                            data-color="red"></button>
+                                        <button class="btttn3 pillowsfiltercolor-btns__color-blue"
+                                            data-color="blue"></button>
+                                    </div>
+
+                                </div>
+                                <div class="pillowsfilter__size pillowsfiltersize">
+                                    <div class="pillowsfilter-size__title filtertitle">Size</div>
+                                    <div class="pillowsfiltersize-btns" id="pillowsfiltersize-buttons">
+                                        <button class="btttn2 active" data-size="All"></button>
+                                        <button class="btttn2 pillowsfiltersize-btns__size1"
+                                            data-size="22x25">22x25</button>
+                                        <button class="btttn2 pillowsfiltersize-btns__size2"
+                                            data-size="82x120">82x120</button>
+                                        <button class="btttn2 pillowsfiltersize-btns__size3"
+                                            data-size="140x24">140x24</button>
+                                    </div>
+                                </div>
+                                <div class="pillowsfilter__type pillowsfiltertype">
+                                    <div class="pillowsfilter-type__title filtertitle">Type</div>
+                                    <div class="pillowsfiltertype-btns" id="pillowsfiltertype-buttons">
+                                        <button class="btttn" data-type="All"></button>
+                                        <button class="btttn pillowsfiltertype-btns__type1"
+                                            data-type="Orthopedic">Orthopedic</button>
+                                        <button class="btttn pillowsfiltertype-btns__type2"
+                                            data-type="Wecolflyed">Wecolflyed</button>
+                                        <button class="btttn pillowsfiltertype-btns__type3"
+                                            data-type="Ex-Vision">Ex-Vision</button>
+                                        <button class="btttn pillowsfiltertype-btns__type4"
+                                            data-type="Dakimakura">Dakimakura</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                    <!-- <div class="filters__bedsheetsfilter bedsheetsfilter">
+                        <details open class="bedsheetsdetails">
+                            <summary>BED SHEETS</summary>
+                            <div class="hidden-text">
+                                <div class="bedsheetsfilter__color bedsheetsfiltercolor">
+                                    <div class="bedsheetsfiltercolor__title filtertitle">Color</div>
+                                    <div class="bedsheetsfiltercolor-btns" id="bedsheetsfiltercolor-buttons">
+                                        <button class="btttn3 active"></button>
+                                        <button class="btttn3 bedsheetsfiltercolor-btns__color-white"
+                                            data-color="white"></button>
+                                        <button class="btttn3 bedsheetsfiltercolor-btns__color-black"
+                                            data-color="black"></button>
+                                        <button class="btttn3 bedsheetsfiltercolor-btns__color-orange"
+                                            data-color="orange"></button>
+                                        <button class="btttn3 bedsheetsfiltercolor-btns__color-red"
+                                            data-color="red"></button>
+                                        <button class="btttn3 bedsheetsfiltercolor-btns__color-blue"
+                                            data-color="blue"></button>
+                                    </div>
+                                </div>
+                                <!-- <div class="bedsheetsfilter__size bedsheetsfiltersize">
+                                    <div class="bedsheetsfilter-size__title filtertitle">Size</div>
+                                    <div class="bedsheetsfiltersize-btns" id="bedsheetsfiltersize-buttons">
+                                        <button class="btttn2 active" onclick="filterSelection('All')"></button>
+                                        <button class="btttn2 bedsheetsfiltersize-btns__size1"
+                                            onclick="filterSelection('22x25')">22x25</button>
+                                        <button class="btttn2 bedsheetsfiltersize-btns__size2"
+                                            onclick="filterSelection('82x120')">82x120</button>
+                                        <button class="btttn2 bedsheetsfiltersize-btns__size3"
+                                            onclick="filterSelection('140x24')">140x24</button>
+                                    </div>
+                                </div> 
+                                <div class="bedsheetsfilter__type bedsheetsfiltertype">
+                                    <div class="bedsheetsfilter-type__title filtertitle">Type</div>
+                                    <div class="bedsheetsfiltertype-btns" id="bedsheetsfiltertype-buttons">
+                                        <button class="btttn" onclick="filterSelection('all')"></button>
+                                        <button class="btttn bedsheetsfiltertype-btns__type1"
+                                            onclick="filterSelection('Orthopedic')">Orthopedic</button>
+                                        <button class="btttn bedsheetsfiltertype-btns__type2"
+                                            onclick="filterSelection('Wecolflyed')">Wecolflyed</button>
+                                        <button class="btttn bedsheetsfiltertype-btns__type3"
+                                            onclick="filterSelection('Ex-Vision')">Ex-Vision</button>
+                                        <button class="btttn bedsheetsfiltertype-btns__type4"
+                                            onclick="filterSelection('Dakimakura')">Dakimakura</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </div> -->
+                </aside>
+                <div class="main__catalog catalog">
+                    <div class="catalog__topfilters topfilters">
+                        <div class="topfilters__search">
+                            <input id="searchbar" onkeyup="search_catalog()" type="text" placeholder="Search..">
+                            <button>
+                                <img src="./images/search-icon.png" alt="search">
+                            </button>
+                        </div>
+                        <div class="topfilters__dropdown dropdown">
+                            <select class="dropdown__selector" id="dropdown__selector">
+                                <option value="featured">Featured</option>
+                                <option value="popular">Popularity</option>
+                                <option value="price-lowest-to-high">Price: Low to High</option>
+                                <option value="price-high-to-lowest">Price: High to Low</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Catalog Items -->
+                    <ul class="catalog__items items" id="items"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/catalog/catalog_itemloader.js"></script>
+    <script src="js/catalog/catalog_selector-filter.js"></script>
+    <script src="js/catalog/catalog_search.js"></script>
+    <script src="js/catalog/catalog_pricefilter.js"></script>
+    <script src="js/catalog/catalog_filters.js"></script>
+    <script src="js/catalog/catalog_dropdown.js"></script>
+
+</body>
+
+</html>

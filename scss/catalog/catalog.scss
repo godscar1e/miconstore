@@ -1,0 +1,724 @@
+@import "../starter";
+
+.main {
+    &__container {
+        padding: 0 20px;
+
+        .main__body {
+            margin: 46px auto 0 auto;
+            max-width: 1646px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .filters {
+            width: 215px;
+            margin-left: 19px;
+
+            details {
+                summary {
+                    list-style-type: none;
+                    cursor: pointer;
+                    width: 334px;
+                    height: 29px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: $mainblack;
+
+                    &::before {
+                        position: absolute;
+                        content: "⠀";
+                        font-size: 10px;
+                        line-height: 17px;
+                        margin-left: -20px;
+                        margin-right: 10px;
+                        margin-top: 7px;
+                        background-color: $goldcolor;
+                        border-radius: 1px;
+                    }
+                }
+            }
+
+            details[open] {
+                > summary {
+                    &::before {
+                        position: absolute;
+                        content: "⠀";
+                        margin-right: 0px;
+                        margin-top: 10px;
+                        font-size: 27px;
+                        line-height: 7px;
+                        background-color: $goldcolor;
+                        border-radius: 1px;
+                    }
+                }
+
+                div {
+                    animation: slide 0.5s;
+                }
+            }
+
+            details.pricesdetails[open] {
+                height: 160px;
+            }
+
+            details.pillowsdetails[open] {
+                height: 414px;
+            }
+
+            .pricefilter {
+                @keyframes slide {
+                    0% {
+                        opacity: 0;
+                        transform: translate(0, -20px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                }
+
+                .price-filter-slider {
+                    margin-top: 36px;
+                    height: 5px;
+                    left: -20px;
+                    position: relative;
+                    border-radius: 5px;
+
+                    .progress {
+                        height: 2px;
+                        right: 25%;
+                        position: absolute;
+                        border-radius: 5px;
+                        background: #777777;
+                    }
+                }
+
+                .range-input {
+                    position: relative;
+
+                    input {
+                        position: absolute;
+                        width: 101%;
+                        height: 4px;
+                        top: -6px;
+                        left: -21px;
+                        background: none;
+                        pointer-events: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                    }
+                }
+
+                input[type="range"] {
+                    &::-webkit-slider-thumb {
+                        height: 16px;
+                        width: 16px;
+                        border-radius: 50%;
+                        background: $goldcolor;
+                        pointer-events: auto;
+                        -webkit-appearance: none;
+                        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+                        cursor: pointer;
+                    }
+
+                    &::-moz-range-thumb {
+                        height: 16px;
+                        width: 16px;
+                        border: none;
+                        border-radius: 50%;
+                        background: $goldcolor;
+                        pointer-events: auto;
+                        -moz-appearance: none;
+                        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+                        cursor: pointer;
+                    }
+                }
+
+                .filter-price {
+                    margin-top: 106px;
+                    margin-bottom: 66px;
+                }
+
+                input[type="number"]::-webkit-inner-spin-button,
+                input[type="number"]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    margin: 0;
+                }
+
+                .price-input {
+                    width: 100%;
+                    display: flex;
+                    margin: 5px 0 35px -20px;
+
+                    .field {
+                        display: flex;
+                        width: 100%;
+                        height: 45px;
+
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 17px;
+                        align-items: center;
+                        color: $goldcolor;
+
+                        .to {
+                            margin-left: 10px;
+                        }
+
+                        input {
+                            width: 66px;
+                            height: 20px;
+                            outline: none;
+                            margin-left: 12px;
+
+                            font-style: normal;
+                            color: $mainblack;
+                            text-align: center;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: normal;
+                            border: 1px solid #d9d9d9;
+                            border-radius: 5px;
+                            -moz-appearance: textfield;
+                        }
+                    }
+
+                    .separator {
+                        width: 130px;
+                        display: flex;
+                        font-size: 19px;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            .pillowsfilter {
+                .pillowsdetails {
+                    summary {
+                    }
+
+                    .hidden-text {
+                        margin-left: -20px;
+
+                        .btttn:first-child,
+                        .btttn2:first-child,
+                        .btttn3:first-child {
+                            display: none;
+                        }
+
+                        .filtertitle {
+                            margin: 30px 0 15px 0;
+                            color: $goldcolor;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+
+                        .pillowsfiltercolor {
+                            .ellipse {
+                                position: absolute;
+                                width: 14px;
+                                height: 14px;
+                                background-color: $goldcolor;
+                                border-radius: 50%;
+                                opacity: 0;
+                                transition: opacity 0.3s ease-in-out;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 9px;
+                            }
+
+                            .ellipse::before {
+                                content: "\2713";
+                                color: #feffff;
+                            }
+
+                            .pillowsfiltercolor-btns {
+                                display: flex;
+                                gap: 22px;
+
+                                &__color-white {
+                                    @include ellipse;
+                                    background-color: white;
+                                }
+
+                                &__color-black {
+                                    @include ellipse;
+                                    background-color: #000000;
+                                }
+
+                                &__color-orange {
+                                    @include ellipse;
+                                    background-color: #d67606;
+                                }
+
+                                &__color-red {
+                                    @include ellipse;
+                                    background-color: #ce1919;
+                                }
+
+                                &__color-blue {
+                                    @include ellipse;
+                                    background-color: #008fb7;
+                                }
+                            }
+                        }
+
+                        .pillowsfiltersize {
+                            .pillowsfiltersize-btns {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-left: -5px;
+
+                                button {
+                                    height: 28px;
+                                    color: $mainblack;
+                                    font-family: Inter;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 300;
+                                    line-height: normal;
+                                    background-color: transparent;
+
+                                    &:hover {
+                                        color: $mainblack;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $mainblack;
+                                    }
+
+                                    &.active {
+                                        color: $goldcolor;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $goldcolor;
+                                    }
+                                }
+
+                                &__size1 {
+                                    width: 64px;
+                                }
+
+                                &__size2 {
+                                    width: 73px;
+                                }
+
+                                &__size3 {
+                                    width: 73px;
+                                }
+                            }
+                        }
+
+                        .pillowsfiltertype {
+                            .pillowsfiltertype-btns {
+                                display: block;
+                                grid-row: 2;
+                                grid-column: 2;
+                                margin-left: -7px;
+
+                                button {
+                                    height: 29px;
+                                    color: $mainblack;
+                                    font-family: Inter;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 300;
+                                    line-height: normal;
+                                    background-color: transparent;
+
+                                    &:hover {
+                                        color: $mainblack;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $mainblack;
+                                    }
+
+                                    &.active {
+                                        color: $goldcolor;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $goldcolor;
+                                    }
+                                }
+
+                                &__type1 {
+                                    width: 100px;
+                                    margin-right: 33px;
+                                }
+
+                                &__type2 {
+                                    width: 97px;
+                                }
+
+                                &__type3 {
+                                    width: 86px;
+                                    margin: 16px 42px 0 0;
+                                }
+
+                                &__type4 {
+                                    width: 106px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bedsheetsfilter {
+                .bedsheetsdetails {
+                    summary {
+                    }
+
+                    .hidden-text {
+                        margin-left: -20px;
+
+                        .btttn:first-child,
+                        .btttn2:first-child,
+                        .btttn3:first-child {
+                            display: none;
+                        }
+
+                        .filtertitle {
+                            margin: 30px 0 15px 0;
+                            color: $goldcolor;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+
+                        .bedsheetsfiltercolor {
+                            .bedsheetsfiltercolor-btns {
+                                display: flex;
+                                gap: 22px;
+
+                                &__color-white {
+                                    @include ellipse;
+                                    background-color: white;
+                                }
+
+                                &__color-black {
+                                    @include ellipse;
+                                    background-color: #000000;
+                                }
+
+                                &__color-orange {
+                                    @include ellipse;
+                                    background-color: #d67606;
+                                }
+
+                                &__color-red {
+                                    @include ellipse;
+                                    background-color: #ce1919;
+                                }
+
+                                &__color-blue {
+                                    @include ellipse;
+                                    background-color: #008fb7;
+                                }
+                            }
+                        }
+
+                        .bedsheetsfiltersize {
+                            .bedsheetsfiltersize-btns {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-left: -5px;
+
+                                button {
+                                    height: 28px;
+                                    color: $mainblack;
+                                    font-family: Inter;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 300;
+                                    line-height: normal;
+                                    background-color: transparent;
+
+                                    &:hover {
+                                        color: $mainblack;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $mainblack;
+                                    }
+
+                                    &.active {
+                                        color: $goldcolor;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $goldcolor;
+                                    }
+                                }
+
+                                &__size1 {
+                                    width: 64px;
+                                }
+
+                                &__size2 {
+                                    width: 73px;
+                                }
+
+                                &__size3 {
+                                    width: 73px;
+                                }
+                            }
+                        }
+
+                        .bedsheetsfiltertype {
+                            .bedsheetsfiltertype-btns {
+                                display: block;
+                                grid-row: 2;
+                                grid-column: 2;
+                                margin-left: -7px;
+
+                                button {
+                                    height: 29px;
+                                    color: $mainblack;
+                                    font-family: Inter;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 300;
+                                    line-height: normal;
+                                    background-color: transparent;
+
+                                    &:hover {
+                                        color: $mainblack;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $mainblack;
+                                    }
+
+                                    &.active {
+                                        color: $goldcolor;
+                                        font-weight: 700;
+                                        border-radius: 5px;
+                                        border: 1px solid $goldcolor;
+                                    }
+                                }
+
+                                &__type1 {
+                                    width: 100px;
+                                    margin-right: 33px;
+                                }
+
+                                &__type2 {
+                                    width: 97px;
+                                }
+
+                                &__type3 {
+                                    width: 86px;
+                                    margin: 16px 42px 0 0;
+                                }
+
+                                &__type4 {
+                                    width: 106px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .catalog {
+            .topfilters {
+                width: 1245px;
+                display: flex;
+
+                &__search {
+                    max-width: 988px;
+                    width: 100%;
+
+                    input {
+                        max-width: 988px;
+                        width: 100%;
+                        height: 40px;
+                        padding-left: 30px;
+                        color: #777;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: normal;
+                        border: 1px solid #d9d9d9;
+                        border-top-left-radius: 5px;
+                        filter: drop-shadow(0px 4px 4px rgba(68, 68, 68, 0.15));
+                        outline: none;
+                    }
+
+                    button {
+                        position: absolute;
+                        margin-left: -40px;
+                        margin-top: 10px;
+                        border: none;
+                    }
+                }
+
+                .topfilters__dropdown {
+                    margin-left: 40px;
+                    box-shadow: 0px 4px 4px 0px #d9d9d9;
+                    &.dropdown {
+                        .dropdown__selector {
+                            position: relative;
+                            width: 217px;
+                            height: 40px;
+                            padding: 0 20px 0 30px;
+                            color: $mainblack;
+                            font-size: 16px;
+                            border: 1px solid #d9d9d9;
+                            border-top-right-radius: 5px;
+                            // -moz-appearance: none;
+                            // -webkit-appearance: none;
+                            // appearance: none;
+                            outline: none;
+                            // background: transparent;
+                            background-origin: content-box;
+
+                            cursor: pointer;
+                            // &::after {
+                            //     content: "";
+                            //     position: absolute;
+                            //     background-image: url("/images/dropdown-icon.png");
+                            //     margin-top: 5px;
+                            //     margin-right: 200px; /* Расположение галочки справа */
+                            //     transform: translateY(-50%);
+                            //     width: 7px;
+                            //     height: 12px;
+
+                            //     transition: transform 0.3s ease;
+                            //     cursor: pointer;
+                            // }
+                        }
+                    }
+
+                    // &:focus {
+                    //     /* Поворачиваем только галочку */
+                    //     &::after {
+                    //         transform: translateY(-50%) rotate(180deg);
+                    //     }
+                    // }
+                }
+            }
+            .items {
+                max-width: 1245px;
+                width: 100%;
+                display: flex;
+                gap: 40px;
+                margin-top: 45px;
+                flex-wrap: wrap;
+
+                &__good {
+                    .filterDiv {
+                        .card {
+                            width: 217px;
+                            height: 317px;
+                            padding: 15px;
+                            border: 1px solid #d9d9d9;
+                            background: #feffff;
+                            box-shadow: 0px 4px 4px 0px #d9d9d9;
+                            cursor: pointer;
+
+                            &__image {
+                            }
+
+                            &__name {
+                                height: 30px;
+                                margin-top: 9px;
+                                color: $mainblack;
+                                font-family: Inter;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+
+                            &__oldprice {
+                                color: $mainblack;
+                                margin-top: 15px;
+                                font-family: Rasa;
+                                font-size: 14px;
+                                font-weight: 300;
+                                line-height: normal;
+                                text-align: right;
+                                text-decoration: line-through;
+                            }
+
+                            .checkout-btn {
+                                position: relative;
+                                display: flex;
+                                width: 187px;
+                                height: 22px;
+                                color: $mainblack;
+                                border: 1px solid $goldcolor;
+                                transition: all ease-in-out 0.2s;
+
+                                &:hover {
+                                    background-color: $mainblack;
+                                    color: white;
+                                    border-top: 1px solid $mainblack;
+                                    border-bottom: 1px solid $mainblack;
+                                    border-left: 1px solid $mainblack;
+
+                                    > .checkout-btn__price-rect {
+                                        background-color: $maingray;
+                                    }
+
+                                    > .checkout-btn__cartimg {
+                                        background-image: url("/images/cart white.svg");
+                                    }
+                                }
+
+                                &__cartimg {
+                                    position: relative;
+                                    align-self: center;
+                                    margin: 0 26px 0 10px;
+                                }
+
+                                &__label {
+                                    align-self: center;
+                                    font-family: Inter;
+                                    font-size: 12px;
+                                    font-weight: 300;
+                                    line-height: normal;
+                                }
+
+                                &__price-rect {
+                                    position: absolute;
+                                    top: -5%;
+                                    right: 0;
+                                    width: 46px;
+                                    height: 110%;
+                                    color: #feffff;
+                                    text-align: center;
+                                    font-family: Rasa;
+                                    font-size: 18px;
+                                    font-weight: 300;
+                                    line-height: normal;
+                                    background-color: $goldcolor;
+                                    transition: all ease-in-out 0.2s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sorted-items {
+                max-width: 1245px;
+                width: 100%;
+                display: flex;
+                gap: 0;
+                margin-top: 45px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

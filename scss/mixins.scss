@@ -1,0 +1,6 @@
+@mixin ellipse {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    border: 1px solid $goldcolor;
+}

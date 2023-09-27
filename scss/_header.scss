@@ -1,0 +1,47 @@
+.header {
+    &__container {
+        padding: 0 20px;
+        .header__body {
+            max-width: 1646px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid #d9d9d9;
+        }
+    }
+    .header__email {
+        padding: 19px 0;
+        .email {
+            color: #444;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    .header__logo {
+        padding: 16px 0;
+        margin-left: -10%;
+        cursor: pointer;
+    }
+    .head-nav {
+        max-width: 90px;
+        width: 100%;
+        display: flex;
+        padding: 15px 0;
+        gap: 30px;
+        &__cart {
+            width: 30px;
+            height: 30px;
+            background-image: url("../images/cart.svg");
+            cursor: pointer;
+        }
+        &__profile {
+            width: 30px;
+            height: 30px;
+            background-image: url("../images/profile.svg");
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+}

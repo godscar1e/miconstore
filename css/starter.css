@@ -1,0 +1,133 @@
+@import "https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap";
+@import "https://fonts.googleapis.com/css?family=Rasa:300,regular,500&display=swap";
+@import "https://fonts.googleapis.com/css?family=Unna:regular&display=swap";
+* {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  margin: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+  box-sizing: border-box;
+}
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  box-sizing: inherit;
+  box-sizing: border-box;
+}
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  outline: none;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  color: #444;
+}
+
+.header__container {
+  padding: 0 20px;
+}
+.header__container .header__body {
+  max-width: 1646px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #d9d9d9;
+}
+.header .header__email {
+  padding: 19px 0;
+}
+.header .header__email .email {
+  color: #444;
+  font-size: 18px;
+  font-weight: 700;
+}
+.header .header__logo {
+  padding: 16px 0;
+  margin-left: -10%;
+  cursor: pointer;
+}
+.header .head-nav {
+  max-width: 90px;
+  width: 100%;
+  display: flex;
+  padding: 15px 0;
+  gap: 30px;
+}
+.header .head-nav__cart {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/cart.svg");
+  cursor: pointer;
+}
+.header .head-nav__profile {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/profile.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

@@ -1,0 +1,78 @@
+@media only screen and (max-width: 480px) {
+    body {
+        background: #eeeff1;
+    }
+    .header {
+        display: none;
+    }
+    .main {
+        &__topblock {
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap-reverse;
+            .topblock__image {
+                img {
+                    width: 335px;
+                    height: 178px;
+                }
+            }
+            .topblockbody {
+                margin-left: auto;
+                margin-right: auto;
+                &__text {
+                    display: none;
+                }
+                &__catalog-button {
+                    width: 331px;
+                    height: 24px;
+                }
+            }
+        }
+        &__bottomblock {
+            background: linear-gradient(180deg, #eeeff1 0%, #feffff 100%);
+            .bottomblock-container {
+                .mostpopular {
+                    .swiper {
+                        width: 375px;
+                    }
+                }
+                .recentnews {
+                    position: relative !important;
+                    left: 0 !important;
+                    .secondaryblock {
+                        &__selected-block {
+                            width: 335px;
+                        }
+                        &__label {
+                            width: 192px;
+                            height: 49px;
+                            padding-left: 15px;
+                            border-bottom: 5px solid $maingreen;
+                            border-left: 5px solid $maingreen;
+                            border-radius: 1px;
+                            &::before {
+                                display: none;
+                            }
+                        }
+                        .secondaryblock__slider {
+                            width: 124px !important;
+                            height: 49px !important;
+                            .slide {
+                                img {
+                                    width: 124px;
+                                    height: 49px;
+                                }
+                                p {
+                                    width: 124px !important;
+                                    height: 11px !important;
+                                    font-size: 6px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

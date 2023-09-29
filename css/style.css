@@ -73,6 +73,10 @@ button {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -111,7 +115,7 @@ body {
   font-weight: 700;
 }
 .header .header__logo {
-  padding: 16px 0;
+  padding: 16px 0 16px 50px;
   margin-left: -10%;
   cursor: pointer;
 }
@@ -553,6 +557,10 @@ button {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -591,7 +599,7 @@ body {
   font-weight: 700;
 }
 .header .header__logo {
-  padding: 16px 0;
+  padding: 16px 0 16px 50px;
   margin-left: -10%;
   cursor: pointer;
 }

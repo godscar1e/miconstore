@@ -69,6 +69,10 @@ button {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 html {
   margin: 0;
   padding: 0;

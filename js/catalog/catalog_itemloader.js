@@ -25,7 +25,7 @@ function goodsOut(products) {
         out += '<p class="card__oldprice">' + "$" + product.oldprice + '</p>';
         out += '</a>';
         out += '<button class="card__checkout-btn checkout-btn">';
-        out += '<img class="checkout-btn__cartimg" src="/images/item-cart.svg">';
+        out += '<img class="checkout-btn__cartimg" src="./images/item-cart.svg">';
         out += '<p class="checkout-btn__label">' + "CHECKOUT" + '</p>';
         out += '<div class="checkout-btn__price-rect">' + "$" + product.current__price + '</div>';
         out += '</button>';

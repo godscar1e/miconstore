@@ -1,7 +1,7 @@
 
 
 function init() {
-    $.getJSON("js/catalog/catalogitems.json", function (data) {
+    $.getJSON("./catalogitems.json", function (data) {
         // Assuming that products are now stored in the "products" array
         if (Array.isArray(data.products) && data.products.length > 0) {
             goodsOut(data.products);
